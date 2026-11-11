@@ -1,0 +1,18 @@
+{
+  "name": "dsh-desktop-toolkit",
+  "version": "0.1.1",
+  "description": "Windows desktop automation toolkit for DSH agents: window scoping, named anchors, UIA-first clicking with OCR fallback, screen grid, and document conversion. Ships as CLI + prebuilt .NET helpers.",
+  "type": "module",
+  "license": "MIT",
+  "author": "YuZai",
+  "keywords": ["dsh", "desktop", "automation", "uia", "ocr", "windows", "agent-tools"],
+  "bin": {
+    "dsh-desktop": "./control.mjs"
+  },
+  "files": ["control.mjs", "ocr-svc.mjs", "bin", "ps", "src", "build.ps1", "README.md", "KNOWN-LIMITS.md"],
+  "engines": { "node": ">=18" },
+  "os": ["win32"],
+  "scripts": {
+    "build": "powershell -ExecutionPolicy Bypass -File build.ps1"
+  }
+}
